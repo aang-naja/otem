@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+
+RewriteRule ^([a-zA-Z0-9_-]+)\.aspx$ index.php?page=$1 [L]
+RewriteRule ^signup\.html$ control/post_signup.php?page=$1 [L]
+RewriteRule ^signin\.html$ control/post_signin.php?page=$1 [L]
+RewriteRule ^proses\.html$ control/proses.php?page=$1 [L]
+RewriteRule ^logout\.html$ control/logout.php?page=$1 [L]
+RewriteRule ^activation\.html$ control/post_activation.php?page=$1 [L]
+Options All -Indexes
+
+</IfModule>
